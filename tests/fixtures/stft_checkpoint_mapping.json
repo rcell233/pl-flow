@@ -1,0 +1,4436 @@
+{
+  "config": {
+    "encoder": {
+      "latent_channels": 32,
+      "hidden_channels": 192,
+      "encoder_kernel_size": 5,
+      "encoder_dilation_rate": 1,
+      "encoder_layers": 16,
+      "stft_hop_length": 320,
+      "stft_win_length": 1280,
+      "m2l_last_time_downsample_factor": 2
+    },
+    "decoder": {
+      "latent_channels": 32,
+      "stft_hop_length": 320,
+      "stft_win_length": 1280,
+      "m2l_last_time_downsample_factor": 2
+    }
+  },
+  "original_tensor_count": 289,
+  "target_tensor_count": 313,
+  "parameter_count": 29075362,
+  "entries": [
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.conv1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_in.bias",
+      "current": "decoder.temporal_residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.conv1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_in.weight",
+      "current": "decoder.temporal_residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.conv2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_out.bias",
+      "current": "decoder.temporal_residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.conv2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_out.weight",
+      "current": "decoder.temporal_residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.norm1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_in.bias",
+      "current": "decoder.temporal_residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.norm1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_in.weight",
+      "current": "decoder.temporal_residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.norm2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_out.bias",
+      "current": "decoder.temporal_residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.0.norm2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_out.weight",
+      "current": "decoder.temporal_residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.conv1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.conv_in.bias",
+      "current": "decoder.temporal_residuals.1.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.conv1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.conv_in.weight",
+      "current": "decoder.temporal_residuals.1.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.conv2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.conv_out.bias",
+      "current": "decoder.temporal_residuals.1.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.conv2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.conv_out.weight",
+      "current": "decoder.temporal_residuals.1.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.norm1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.norm_in.bias",
+      "current": "decoder.temporal_residuals.1.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.norm1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.norm_in.weight",
+      "current": "decoder.temporal_residuals.1.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.norm2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.norm_out.bias",
+      "current": "decoder.temporal_residuals.1.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.1.norm2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.1.branch.norm_out.weight",
+      "current": "decoder.temporal_residuals.1.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.conv1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.conv_in.bias",
+      "current": "decoder.temporal_residuals.2.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.conv1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.conv_in.weight",
+      "current": "decoder.temporal_residuals.2.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.conv2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.conv_out.bias",
+      "current": "decoder.temporal_residuals.2.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.conv2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.conv_out.weight",
+      "current": "decoder.temporal_residuals.2.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.norm1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.norm_in.bias",
+      "current": "decoder.temporal_residuals.2.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.norm1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.norm_in.weight",
+      "current": "decoder.temporal_residuals.2.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.norm2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.norm_out.bias",
+      "current": "decoder.temporal_residuals.2.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.2.norm2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.2.branch.norm_out.weight",
+      "current": "decoder.temporal_residuals.2.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.conv1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.conv_in.bias",
+      "current": "decoder.temporal_residuals.3.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.conv1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.conv_in.weight",
+      "current": "decoder.temporal_residuals.3.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.conv2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.conv_out.bias",
+      "current": "decoder.temporal_residuals.3.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        512,
+        3
+      ],
+      "target_shape": [
+        512,
+        512,
+        3
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.conv2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.conv_out.weight",
+      "current": "decoder.temporal_residuals.3.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.norm1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.norm_in.bias",
+      "current": "decoder.temporal_residuals.3.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.norm1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.norm_in.weight",
+      "current": "decoder.temporal_residuals.3.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.norm2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.norm_out.bias",
+      "current": "decoder.temporal_residuals.3.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.bottleneck_layers.3.norm2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.3.branch.norm_out.weight",
+      "current": "decoder.temporal_residuals.3.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512
+      ],
+      "target_shape": [
+        512
+      ],
+      "original": "decoder.dec.conv_inp.bias",
+      "staged": "decoder.synthesis.temporal_input.bias",
+      "current": "decoder.latent_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        512,
+        32,
+        1
+      ],
+      "target_shape": [
+        512,
+        32,
+        1
+      ],
+      "original": "decoder.dec.conv_inp.weight",
+      "staged": "decoder.synthesis.temporal_input.weight",
+      "current": "decoder.latent_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        2
+      ],
+      "target_shape": [
+        2
+      ],
+      "original": "decoder.dec.conv_out.bias",
+      "staged": "decoder.synthesis.readout.conv.bias",
+      "current": "decoder.spectral_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        2,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        2,
+        64,
+        3,
+        3
+      ],
+      "original": "decoder.dec.conv_out.weight",
+      "staged": "decoder.synthesis.readout.conv.weight",
+      "current": "decoder.spectral_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        5120
+      ],
+      "target_shape": [
+        5120
+      ],
+      "original": "decoder.dec.conv_out_bottleneck.bias",
+      "staged": "decoder.synthesis.frequency_projection.bias",
+      "current": "decoder.spectral_expansion.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        5120,
+        512,
+        1
+      ],
+      "target_shape": [
+        5120,
+        512,
+        1
+      ],
+      "original": "decoder.dec.conv_out_bottleneck.weight",
+      "staged": "decoder.synthesis.frequency_projection.weight",
+      "current": "decoder.spectral_expansion.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.norm_out.bias",
+      "staged": "decoder.synthesis.readout.norm.bias",
+      "current": "decoder.final_normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.norm_out.weight",
+      "staged": "decoder.synthesis.readout.norm.weight",
+      "current": "decoder.final_normalization.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.query.bias",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.key.bias",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.value.bias",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.query.weight",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.key.weight",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.value.weight",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.out_proj.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.output.bias",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.mha.out_proj.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.output.weight",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.norm.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.norm.bias",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.attention.norm.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.attention.norm.weight",
+      "current": "decoder.resolutions.4.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.conv1.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.conv_in.bias",
+      "current": "decoder.resolutions.4.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.0.conv1.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.conv_in.weight",
+      "current": "decoder.resolutions.4.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.conv2.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.conv_out.bias",
+      "current": "decoder.resolutions.4.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.0.conv2.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.conv_out.weight",
+      "current": "decoder.resolutions.4.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.norm1.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.norm_in.bias",
+      "current": "decoder.resolutions.4.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.norm1.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.norm_in.weight",
+      "current": "decoder.resolutions.4.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.norm2.bias",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.norm_out.bias",
+      "current": "decoder.resolutions.4.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.0.norm2.weight",
+      "staged": "decoder.synthesis.stages.4.blocks.0.branch.norm_out.weight",
+      "current": "decoder.resolutions.4.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.1.conv.bias",
+      "staged": "decoder.synthesis.stages.4.upsample.conv.bias",
+      "current": "decoder.transitions.3.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.1.conv.weight",
+      "staged": "decoder.synthesis.stages.4.upsample.conv.weight",
+      "current": "decoder.transitions.3.filter.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.query.bias",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.key.bias",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.value.bias",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.query.weight",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.key.weight",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.value.weight",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.out_proj.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.output.bias",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.mha.out_proj.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.output.weight",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.norm.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.norm.bias",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.attention.norm.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.attention.norm.weight",
+      "current": "decoder.resolutions.3.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.conv1.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.conv_in.bias",
+      "current": "decoder.resolutions.3.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.2.conv1.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.conv_in.weight",
+      "current": "decoder.resolutions.3.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.conv2.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.conv_out.bias",
+      "current": "decoder.resolutions.3.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.2.conv2.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.conv_out.weight",
+      "current": "decoder.resolutions.3.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.norm1.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.norm_in.bias",
+      "current": "decoder.resolutions.3.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.norm1.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.norm_in.weight",
+      "current": "decoder.resolutions.3.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.norm2.bias",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.norm_out.bias",
+      "current": "decoder.resolutions.3.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.2.norm2.weight",
+      "staged": "decoder.synthesis.stages.3.blocks.0.branch.norm_out.weight",
+      "current": "decoder.resolutions.3.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.3.conv.bias",
+      "staged": "decoder.synthesis.stages.3.upsample.conv.bias",
+      "current": "decoder.transitions.2.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.3.conv.weight",
+      "staged": "decoder.synthesis.stages.3.upsample.conv.weight",
+      "current": "decoder.transitions.2.filter.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.query.bias",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.key.bias",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.value.bias",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.query.weight",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.key.weight",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.value.weight",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.out_proj.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.output.bias",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.mha.out_proj.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.output.weight",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.norm.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.norm.bias",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.attention.norm.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.attention.norm.weight",
+      "current": "decoder.resolutions.2.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.conv1.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.conv_in.bias",
+      "current": "decoder.resolutions.2.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.4.conv1.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.conv_in.weight",
+      "current": "decoder.resolutions.2.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.conv2.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.conv_out.bias",
+      "current": "decoder.resolutions.2.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.4.conv2.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.conv_out.weight",
+      "current": "decoder.resolutions.2.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.norm1.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.norm_in.bias",
+      "current": "decoder.resolutions.2.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.norm1.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.norm_in.weight",
+      "current": "decoder.resolutions.2.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.norm2.bias",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.norm_out.bias",
+      "current": "decoder.resolutions.2.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "decoder.dec.up_layers.4.norm2.weight",
+      "staged": "decoder.synthesis.stages.2.blocks.0.branch.norm_out.weight",
+      "current": "decoder.resolutions.2.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.5.conv.bias",
+      "staged": "decoder.synthesis.stages.2.upsample.conv.bias",
+      "current": "decoder.transitions.1.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        256,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.5.conv.weight",
+      "staged": "decoder.synthesis.stages.2.upsample.conv.weight",
+      "current": "decoder.transitions.1.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.conv1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_in.bias",
+      "current": "decoder.resolutions.1.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.6.conv1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_in.weight",
+      "current": "decoder.resolutions.1.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.conv2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_out.bias",
+      "current": "decoder.resolutions.1.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.6.conv2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_out.weight",
+      "current": "decoder.resolutions.1.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.norm1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_in.bias",
+      "current": "decoder.resolutions.1.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.norm1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_in.weight",
+      "current": "decoder.resolutions.1.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.norm2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_out.bias",
+      "current": "decoder.resolutions.1.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "decoder.dec.up_layers.6.norm2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_out.weight",
+      "current": "decoder.resolutions.1.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.7.conv.bias",
+      "staged": "decoder.synthesis.stages.1.upsample.conv.bias",
+      "current": "decoder.transitions.0.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        128,
+        5,
+        3
+      ],
+      "target_shape": [
+        64,
+        128,
+        5,
+        3
+      ],
+      "original": "decoder.dec.up_layers.7.conv.weight",
+      "staged": "decoder.synthesis.stages.1.upsample.conv.weight",
+      "current": "decoder.transitions.0.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.conv1.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_in.bias",
+      "current": "decoder.resolutions.0.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.8.conv1.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_in.weight",
+      "current": "decoder.resolutions.0.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.conv2.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_out.bias",
+      "current": "decoder.resolutions.0.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "original": "decoder.dec.up_layers.8.conv2.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_out.weight",
+      "current": "decoder.resolutions.0.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.norm1.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_in.bias",
+      "current": "decoder.resolutions.0.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.norm1.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_in.weight",
+      "current": "decoder.resolutions.0.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.norm2.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_out.bias",
+      "current": "decoder.resolutions.0.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "decoder.dec.up_layers.8.norm2.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_out.weight",
+      "current": "decoder.resolutions.0.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.0.bias",
+      "staged": "encoder.enc_q.enc.in_layers.0.bias",
+      "current": "encoder.posterior.network.in_layers.0.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.0.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.0.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.1.bias",
+      "staged": "encoder.enc_q.enc.in_layers.1.bias",
+      "current": "encoder.posterior.network.in_layers.1.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.1.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.1.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.1.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.1.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.1.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.1.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.10.bias",
+      "staged": "encoder.enc_q.enc.in_layers.10.bias",
+      "current": "encoder.posterior.network.in_layers.10.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.10.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.10.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.10.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.10.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.10.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.10.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.11.bias",
+      "staged": "encoder.enc_q.enc.in_layers.11.bias",
+      "current": "encoder.posterior.network.in_layers.11.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.11.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.11.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.11.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.11.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.11.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.11.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.12.bias",
+      "staged": "encoder.enc_q.enc.in_layers.12.bias",
+      "current": "encoder.posterior.network.in_layers.12.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.12.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.12.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.12.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.12.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.12.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.12.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.13.bias",
+      "staged": "encoder.enc_q.enc.in_layers.13.bias",
+      "current": "encoder.posterior.network.in_layers.13.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.13.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.13.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.13.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.13.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.13.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.13.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.14.bias",
+      "staged": "encoder.enc_q.enc.in_layers.14.bias",
+      "current": "encoder.posterior.network.in_layers.14.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.14.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.14.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.14.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.14.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.14.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.14.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.15.bias",
+      "staged": "encoder.enc_q.enc.in_layers.15.bias",
+      "current": "encoder.posterior.network.in_layers.15.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.15.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.15.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.15.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.15.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.15.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.15.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.2.bias",
+      "staged": "encoder.enc_q.enc.in_layers.2.bias",
+      "current": "encoder.posterior.network.in_layers.2.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.2.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.2.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.2.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.2.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.2.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.2.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.3.bias",
+      "staged": "encoder.enc_q.enc.in_layers.3.bias",
+      "current": "encoder.posterior.network.in_layers.3.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.3.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.3.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.3.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.3.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.3.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.3.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.4.bias",
+      "staged": "encoder.enc_q.enc.in_layers.4.bias",
+      "current": "encoder.posterior.network.in_layers.4.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.4.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.4.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.4.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.4.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.4.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.4.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.5.bias",
+      "staged": "encoder.enc_q.enc.in_layers.5.bias",
+      "current": "encoder.posterior.network.in_layers.5.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.5.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.5.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.5.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.5.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.5.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.5.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.6.bias",
+      "staged": "encoder.enc_q.enc.in_layers.6.bias",
+      "current": "encoder.posterior.network.in_layers.6.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.6.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.6.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.6.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.6.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.6.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.6.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.7.bias",
+      "staged": "encoder.enc_q.enc.in_layers.7.bias",
+      "current": "encoder.posterior.network.in_layers.7.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.7.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.7.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.7.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.7.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.7.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.7.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.8.bias",
+      "staged": "encoder.enc_q.enc.in_layers.8.bias",
+      "current": "encoder.posterior.network.in_layers.8.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.8.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.8.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.8.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.8.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.8.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.8.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.in_layers.9.bias",
+      "staged": "encoder.enc_q.enc.in_layers.9.bias",
+      "current": "encoder.posterior.network.in_layers.9.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.in_layers.9.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.9.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.in_layers.9.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        5
+      ],
+      "target_shape": [
+        384,
+        192,
+        5
+      ],
+      "original": "encoder.enc_q.enc.in_layers.9.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.9.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.in_layers.9.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.0.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.bias",
+      "current": "encoder.posterior.network.res_skip_layers.0.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.0.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.0.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.1.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.1.bias",
+      "current": "encoder.posterior.network.res_skip_layers.1.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.1.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.1.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.1.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.1.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.1.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.1.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.10.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.10.bias",
+      "current": "encoder.posterior.network.res_skip_layers.10.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.10.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.10.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.10.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.10.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.10.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.10.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.11.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.11.bias",
+      "current": "encoder.posterior.network.res_skip_layers.11.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.11.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.11.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.11.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.11.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.11.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.11.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.12.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.12.bias",
+      "current": "encoder.posterior.network.res_skip_layers.12.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.12.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.12.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.12.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.12.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.12.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.12.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.13.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.13.bias",
+      "current": "encoder.posterior.network.res_skip_layers.13.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.13.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.13.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.13.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.13.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.13.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.13.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.14.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.14.bias",
+      "current": "encoder.posterior.network.res_skip_layers.14.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.14.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.14.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.14.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.14.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.14.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.14.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        192
+      ],
+      "target_shape": [
+        192
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.15.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.15.bias",
+      "current": "encoder.posterior.network.res_skip_layers.15.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        192,
+        1,
+        1
+      ],
+      "target_shape": [
+        192,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.15.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.15.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.15.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        192,
+        192,
+        1
+      ],
+      "target_shape": [
+        192,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.15.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.15.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.15.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.2.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.2.bias",
+      "current": "encoder.posterior.network.res_skip_layers.2.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.2.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.2.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.2.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.2.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.2.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.2.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.3.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.3.bias",
+      "current": "encoder.posterior.network.res_skip_layers.3.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.3.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.3.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.3.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.3.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.3.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.3.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.4.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.4.bias",
+      "current": "encoder.posterior.network.res_skip_layers.4.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.4.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.4.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.4.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.4.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.4.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.4.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.5.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.5.bias",
+      "current": "encoder.posterior.network.res_skip_layers.5.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.5.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.5.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.5.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.5.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.5.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.5.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.6.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.6.bias",
+      "current": "encoder.posterior.network.res_skip_layers.6.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.6.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.6.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.6.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.6.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.6.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.6.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.7.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.7.bias",
+      "current": "encoder.posterior.network.res_skip_layers.7.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.7.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.7.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.7.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.7.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.7.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.7.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.8.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.8.bias",
+      "current": "encoder.posterior.network.res_skip_layers.8.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.8.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.8.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.8.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.8.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.8.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.8.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384
+      ],
+      "target_shape": [
+        384
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.9.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.9.bias",
+      "current": "encoder.posterior.network.res_skip_layers.9.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        1,
+        1
+      ],
+      "target_shape": [
+        384,
+        1,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.9.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.9.parametrizations.weight.original0",
+      "current": "encoder.posterior.network.res_skip_layers.9.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        384,
+        192,
+        1
+      ],
+      "target_shape": [
+        384,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.enc.res_skip_layers.9.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.9.parametrizations.weight.original1",
+      "current": "encoder.posterior.network.res_skip_layers.9.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        192
+      ],
+      "target_shape": [
+        192
+      ],
+      "original": "encoder.enc_q.pre.bias",
+      "staged": "encoder.enc_q.pre.bias",
+      "current": "encoder.posterior.input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        192,
+        5120,
+        1
+      ],
+      "target_shape": [
+        192,
+        5120,
+        1
+      ],
+      "original": "encoder.enc_q.pre.weight",
+      "staged": "encoder.enc_q.pre.weight",
+      "current": "encoder.posterior.input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        32
+      ],
+      "target_shape": [
+        32
+      ],
+      "original": "encoder.enc_q.proj.bias",
+      "staged": "encoder.enc_q.proj.bias",
+      "current": "encoder.posterior.output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        32,
+        192,
+        1
+      ],
+      "target_shape": [
+        32,
+        192,
+        1
+      ],
+      "original": "encoder.enc_q.proj.weight",
+      "staged": "encoder.enc_q.proj.weight",
+      "current": "encoder.posterior.output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.conv_inp.bias",
+      "staged": "encoder.analysis.input_projection.bias",
+      "current": "encoder.spectral_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        2,
+        3,
+        3
+      ],
+      "target_shape": [
+        64,
+        2,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.conv_inp.weight",
+      "staged": "encoder.analysis.input_projection.weight",
+      "current": "encoder.spectral_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.conv1.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_in.bias",
+      "current": "encoder.resolutions.0.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.conv1.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_in.weight",
+      "current": "encoder.resolutions.0.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.conv2.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_out.bias",
+      "current": "encoder.resolutions.0.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.conv2.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_out.weight",
+      "current": "encoder.resolutions.0.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.norm1.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_in.bias",
+      "current": "encoder.resolutions.0.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.norm1.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_in.weight",
+      "current": "encoder.resolutions.0.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.norm2.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_out.bias",
+      "current": "encoder.resolutions.0.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.0.norm2.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_out.weight",
+      "current": "encoder.resolutions.0.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.1.conv.bias",
+      "staged": "encoder.analysis.stages.0.downsample.conv.bias",
+      "current": "encoder.transitions.0.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64,
+        64,
+        5,
+        3
+      ],
+      "target_shape": [
+        64,
+        64,
+        5,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.1.conv.weight",
+      "staged": "encoder.analysis.stages.0.downsample.conv.weight",
+      "current": "encoder.transitions.0.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.1.norm.bias",
+      "staged": "encoder.analysis.stages.0.downsample.norm.bias",
+      "current": "encoder.transitions.0.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.1.norm.weight",
+      "staged": "encoder.analysis.stages.0.downsample.norm.weight",
+      "current": "encoder.transitions.0.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.conv1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_in.bias",
+      "current": "encoder.resolutions.1.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.conv1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_in.weight",
+      "current": "encoder.resolutions.1.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.conv2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_out.bias",
+      "current": "encoder.resolutions.1.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.conv2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_out.weight",
+      "current": "encoder.resolutions.1.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.norm1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_in.bias",
+      "current": "encoder.resolutions.1.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        64
+      ],
+      "target_shape": [
+        64
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.norm1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_in.weight",
+      "current": "encoder.resolutions.1.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.norm2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_out.bias",
+      "current": "encoder.resolutions.1.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.norm2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_out.weight",
+      "current": "encoder.resolutions.1.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.res_conv.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.shortcut.bias",
+      "current": "encoder.resolutions.1.residuals.0.shortcut.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        64,
+        1,
+        1
+      ],
+      "target_shape": [
+        128,
+        64,
+        1,
+        1
+      ],
+      "original": "encoder.encoder_frontend.down_layers.2.res_conv.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.shortcut.weight",
+      "current": "encoder.resolutions.1.residuals.0.shortcut.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.3.conv.bias",
+      "staged": "encoder.analysis.stages.1.downsample.conv.bias",
+      "current": "encoder.transitions.1.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "target_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.3.conv.weight",
+      "staged": "encoder.analysis.stages.1.downsample.conv.weight",
+      "current": "encoder.transitions.1.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.3.norm.bias",
+      "staged": "encoder.analysis.stages.1.downsample.norm.bias",
+      "current": "encoder.transitions.1.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.3.norm.weight",
+      "staged": "encoder.analysis.stages.1.downsample.norm.weight",
+      "current": "encoder.transitions.1.normalization.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.query.bias",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.key.bias",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.value.bias",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.query.weight",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.key.weight",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.value.weight",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.out_proj.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.output.bias",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.mha.out_proj.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.output.weight",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.norm.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.norm.bias",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.attention.norm.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.attention.norm.weight",
+      "current": "encoder.resolutions.2.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.conv1.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.conv_in.bias",
+      "current": "encoder.resolutions.2.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.conv1.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.conv_in.weight",
+      "current": "encoder.resolutions.2.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.conv2.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.conv_out.bias",
+      "current": "encoder.resolutions.2.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.conv2.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.conv_out.weight",
+      "current": "encoder.resolutions.2.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.norm1.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.norm_in.bias",
+      "current": "encoder.resolutions.2.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        128
+      ],
+      "target_shape": [
+        128
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.norm1.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.norm_in.weight",
+      "current": "encoder.resolutions.2.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.norm2.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.norm_out.bias",
+      "current": "encoder.resolutions.2.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.norm2.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.branch.norm_out.weight",
+      "current": "encoder.resolutions.2.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.res_conv.bias",
+      "staged": "encoder.analysis.stages.2.blocks.0.shortcut.bias",
+      "current": "encoder.resolutions.2.residuals.0.shortcut.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "original": "encoder.encoder_frontend.down_layers.4.res_conv.weight",
+      "staged": "encoder.analysis.stages.2.blocks.0.shortcut.weight",
+      "current": "encoder.resolutions.2.residuals.0.shortcut.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.5.conv.bias",
+      "staged": "encoder.analysis.stages.2.downsample.conv.bias",
+      "current": "encoder.transitions.2.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.5.conv.weight",
+      "staged": "encoder.analysis.stages.2.downsample.conv.weight",
+      "current": "encoder.transitions.2.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.5.norm.bias",
+      "staged": "encoder.analysis.stages.2.downsample.norm.bias",
+      "current": "encoder.transitions.2.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.5.norm.weight",
+      "staged": "encoder.analysis.stages.2.downsample.norm.weight",
+      "current": "encoder.transitions.2.normalization.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.query.bias",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.key.bias",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.value.bias",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.query.weight",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.key.weight",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.value.weight",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.out_proj.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.output.bias",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.mha.out_proj.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.output.weight",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.norm.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.norm.bias",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.attention.norm.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.attention.norm.weight",
+      "current": "encoder.resolutions.3.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.conv1.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.conv_in.bias",
+      "current": "encoder.resolutions.3.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.conv1.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.conv_in.weight",
+      "current": "encoder.resolutions.3.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.conv2.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.conv_out.bias",
+      "current": "encoder.resolutions.3.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.conv2.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.conv_out.weight",
+      "current": "encoder.resolutions.3.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.norm1.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.norm_in.bias",
+      "current": "encoder.resolutions.3.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.norm1.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.norm_in.weight",
+      "current": "encoder.resolutions.3.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.norm2.bias",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.norm_out.bias",
+      "current": "encoder.resolutions.3.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.6.norm2.weight",
+      "staged": "encoder.analysis.stages.3.blocks.0.branch.norm_out.weight",
+      "current": "encoder.resolutions.3.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.7.conv.bias",
+      "staged": "encoder.analysis.stages.3.downsample.conv.bias",
+      "current": "encoder.transitions.3.filter.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.7.conv.weight",
+      "staged": "encoder.analysis.stages.3.downsample.conv.weight",
+      "current": "encoder.transitions.3.filter.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.7.norm.bias",
+      "staged": "encoder.analysis.stages.3.downsample.norm.bias",
+      "current": "encoder.transitions.3.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.7.norm.weight",
+      "staged": "encoder.analysis.stages.3.downsample.norm.weight",
+      "current": "encoder.transitions.3.normalization.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.query.bias",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.q.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.key.bias",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.k.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.value.bias",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.v.bias"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 0,
+      "stop": 256,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.query.weight",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.q.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 256,
+      "stop": 512,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.key.weight",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.k.weight"
+    },
+    {
+      "operation": "row_slice",
+      "axis": 0,
+      "start": 512,
+      "stop": 768,
+      "source_shape": [
+        768,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.value.weight",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.v.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.out_proj.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.output.bias",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.projection.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256
+      ],
+      "target_shape": [
+        256,
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.mha.out_proj.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.output.weight",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.projection.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.norm.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.norm.bias",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.attention.norm.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.attention.norm.weight",
+      "current": "encoder.resolutions.4.residuals.0.frequency_attention.normalization.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.conv1.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.conv_in.bias",
+      "current": "encoder.resolutions.4.residuals.0.conv_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.conv1.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.conv_in.weight",
+      "current": "encoder.resolutions.4.residuals.0.conv_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.conv2.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.conv_out.bias",
+      "current": "encoder.resolutions.4.residuals.0.conv_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "target_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.conv2.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.conv_out.weight",
+      "current": "encoder.resolutions.4.residuals.0.conv_output.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.norm1.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.norm_in.bias",
+      "current": "encoder.resolutions.4.residuals.0.norm_input.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.norm1.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.norm_in.weight",
+      "current": "encoder.resolutions.4.residuals.0.norm_input.weight"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.norm2.bias",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.norm_out.bias",
+      "current": "encoder.resolutions.4.residuals.0.norm_output.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.down_layers.8.norm2.weight",
+      "staged": "encoder.analysis.stages.4.blocks.0.branch.norm_out.weight",
+      "current": "encoder.resolutions.4.residuals.0.norm_output.weight"
+    },
+    {
+      "operation": "reshape",
+      "source_shape": [
+        1,
+        1,
+        640,
+        1
+      ],
+      "target_shape": [
+        640
+      ],
+      "original": "encoder.encoder_frontend.gain.scale",
+      "staged": "encoder.analysis.frequency_gain",
+      "current": "encoder.frequency_scale"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.prenorm_2d_to_1d.bias",
+      "staged": "encoder.analysis.output_norm.bias",
+      "current": "encoder.final_normalization.bias"
+    },
+    {
+      "operation": "identity",
+      "source_shape": [
+        256
+      ],
+      "target_shape": [
+        256
+      ],
+      "original": "encoder.encoder_frontend.prenorm_2d_to_1d.weight",
+      "staged": "encoder.analysis.output_norm.weight",
+      "current": "encoder.final_normalization.weight"
+    }
+  ]
+}

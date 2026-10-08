@@ -1,0 +1,289 @@
+{
+  "benchmark": "Seed-TTS-Eval",
+  "benchmark_url": "https://github.com/BytedanceSpeech/seed-tts-eval",
+  "metrics": {
+    "error_percent": "Mean utterance WER for English and CER for Chinese; lower is better.",
+    "sim_percent": "100 times the mean reference/generated embedding cosine similarity from WavLM-large speaker verification; higher is better.",
+    "average": "Unweighted mean across all three splits; null when a split is missing."
+  },
+  "parameter_scope": "Primary generation networks. Separate codecs and reference feature encoders are excluded. Exact coverage is stated per model.",
+  "pl_flow": {
+    "parameters": {
+      "s1": 104003312,
+      "s2": 105296784,
+      "plbert": 6292480
+    },
+    "sampling": {
+      "s1_steps": 8,
+      "s1_cfg": 2.1,
+      "s2_steps": 10,
+      "s2_cfg": 2.8,
+      "temperature": 1.0,
+      "max_tokens": 512,
+      "max_frames": 1024,
+      "max_prompt_frames": 250,
+      "prosody_precision": "bf16"
+    },
+    "seed": 1237,
+    "batch_size": 8,
+    "precision": "BF16 on CUDA; FP32 reference audio encoders and codec",
+    "metadata_sha256": {
+      "en_meta": "7cd29f701743e6c7033edbca764ddc0b979de8c4f4907eff5e5454682114661f",
+      "zh_meta": "86b14ae63229615dee73583887a7452a3e68ab3959b1eb5adae132bcddb89d28",
+      "zh_hardcase": "ebae4e77fb558f3e0e2123c33a6420301438138e65fe4b271677527cbdbec07e"
+    },
+    "s1_weights_sha256": "b974a05604d843805baee8c49aa869ef2b58d696d4868af0fe082a9a3aa94b4c",
+    "s2_weights_sha256": "bb2150e1bc84c8d4dc20e87ee49f6aa197106093dc1a3e66ac172abb2d3b6ea2",
+    "sampling_selection": "Sampling steps and CFG were selected on subsets of test-zh and test-zh-hard."
+  },
+  "ground_truth": {
+    "name": "Ground truth (GT)",
+    "parameters": null,
+    "description": "Original target recordings scored against the target text and paired reference recordings.",
+    "metrics": {
+      "test-en": {
+        "error_percent": 2.1430210534611485,
+        "sim_percent": 73.37790628456894,
+        "count": 1088
+      },
+      "test-zh": {
+        "error_percent": 1.2540027910806324,
+        "sim_percent": 75.49680862797074,
+        "count": 2020
+      },
+      "test-zh-hard": null
+    },
+    "score_sha256": {
+      "test-en": {
+        "wer.tsv": "90a8de571f8d209948cac1c0dead20c52ae8aff1ba406a5923e5fec683d6c691",
+        "sim.tsv": "b9717d3a68133f6c4e2518b56ac6adc6f4564af94604b23b1b385ecd5ae2ea7e"
+      },
+      "test-zh": {
+        "wer.tsv": "51dda983255bea481804fef92843105588008ada758359088044a1f684973fc4",
+        "sim.tsv": "18eb67b2f0b870137ed658cbbc68caea31c3e299863c8cd9f99014e00cc6bd71"
+      }
+    }
+  },
+  "models": [
+    {
+      "model": "PL-Flow",
+      "parameters": 215592576,
+      "parameter_scope": "S1 + S2 + frozen PL-BERT; excludes codec, aligner, HuBERT and speaker encoder.",
+      "source": null,
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.961347220997956,
+          "sim_percent": 78.96848946864552,
+          "count": 1088
+        },
+        "test-zh": {
+          "error_percent": 1.2487817159249974,
+          "sim_percent": 83.275746337258,
+          "count": 2020
+        },
+        "test-zh-hard": {
+          "error_percent": 5.25457117541184,
+          "sim_percent": 82.38567866384983,
+          "count": 400
+        }
+      }
+    },
+    {
+      "model": "ZipVoice",
+      "parameters": 123000000,
+      "parameter_scope": "Text encoder and flow decoder; published 123M.",
+      "source": "https://arxiv.org/html/2506.13053v2#S2.T1",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.7,
+          "sim_percent": 69.7
+        },
+        "test-zh": {
+          "error_percent": 1.4,
+          "sim_percent": 75.1
+        },
+        "test-zh-hard": null
+      },
+      "parameter_source": "https://arxiv.org/html/2506.13053v2#S2.T1"
+    },
+    {
+      "model": "F5-TTS",
+      "parameters": 336000000,
+      "parameter_scope": "Text encoder and flow decoder; 336M from the ZipVoice model comparison.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 2.0,
+          "sim_percent": 67.0
+        },
+        "test-zh": {
+          "error_percent": 1.53,
+          "sim_percent": 76.0
+        },
+        "test-zh-hard": {
+          "error_percent": 8.67,
+          "sim_percent": 71.3
+        }
+      },
+      "parameter_source": "https://arxiv.org/html/2506.13053v2#S2.T1"
+    },
+    {
+      "model": "MegaTTS 3",
+      "parameters": 500000000,
+      "parameter_scope": "Published primary model size.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 2.79,
+          "sim_percent": 77.1
+        },
+        "test-zh": {
+          "error_percent": 1.52,
+          "sim_percent": 79.0
+        },
+        "test-zh-hard": null
+      }
+    },
+    {
+      "model": "DiTAR",
+      "parameters": 600000000,
+      "parameter_scope": "Published primary model size.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.69,
+          "sim_percent": 73.5
+        },
+        "test-zh": {
+          "error_percent": 1.02,
+          "sim_percent": 75.3
+        },
+        "test-zh-hard": null
+      }
+    },
+    {
+      "model": "CosyVoice 2",
+      "parameters": 618000000,
+      "parameter_scope": "Language model and acoustic flow; 618M from the ZipVoice model comparison.",
+      "source": "https://github.com/meituan-longcat/LongCat-AudioDiT#experimental-results-on-seed-benchmark",
+      "metrics": {
+        "test-en": {
+          "error_percent": 2.57,
+          "sim_percent": 65.2
+        },
+        "test-zh": {
+          "error_percent": 1.45,
+          "sim_percent": 74.8
+        },
+        "test-zh-hard": {
+          "error_percent": 6.83,
+          "sim_percent": 72.4
+        }
+      },
+      "parameter_source": "https://arxiv.org/html/2506.13053v2#S2.T1"
+    },
+    {
+      "model": "CosyVoice 3 (1.5B)",
+      "parameters": 1800000000,
+      "parameter_scope": "1.5B language model + 0.3B acoustic flow; excludes tokenizer and vocoder.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 2.22,
+          "sim_percent": 72.0
+        },
+        "test-zh": {
+          "error_percent": 1.12,
+          "sim_percent": 78.1
+        },
+        "test-zh-hard": {
+          "error_percent": 5.83,
+          "sim_percent": 75.8
+        }
+      },
+      "parameter_source": "https://arxiv.org/html/2505.17589v2"
+    },
+    {
+      "model": "VoxCPM 2",
+      "parameters": 2000000000,
+      "parameter_scope": "Published primary backbone size; excludes AudioVAE.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.84,
+          "sim_percent": 75.3
+        },
+        "test-zh": {
+          "error_percent": 0.97,
+          "sim_percent": 79.5
+        },
+        "test-zh-hard": {
+          "error_percent": 8.13,
+          "sim_percent": 75.3
+        }
+      }
+    },
+    {
+      "model": "FireRedTTS3-Base",
+      "parameters": 2120632897,
+      "parameter_scope": "Public Base generation checkpoint count; excludes RedAE and CAM++.",
+      "source": "https://github.com/FireRedTeam/FireRedTTS3#zero-shot-voice-cloning--seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.64,
+          "sim_percent": 77.2
+        },
+        "test-zh": {
+          "error_percent": 1.01,
+          "sim_percent": 80.9
+        },
+        "test-zh-hard": {
+          "error_percent": 6.5,
+          "sim_percent": 78.4
+        }
+      },
+      "parameter_source": "https://huggingface.co/FireRedTeam/FireRedTTS3/tree/dcf1bdcd1b8b25b382fa84c3e34eb82e3054a610"
+    },
+    {
+      "model": "dots.tts (SOAR)",
+      "parameters": 2198091778,
+      "parameter_scope": "Public SOAR generation checkpoint count; excludes AudioVAE and CAM++.",
+      "source": "https://github.com/studio-dots-ai/dots.tts#seed-tts-eval",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.3,
+          "sim_percent": 77.1
+        },
+        "test-zh": {
+          "error_percent": 0.94,
+          "sim_percent": 81.0
+        },
+        "test-zh-hard": {
+          "error_percent": 6.6,
+          "sim_percent": 79.5
+        }
+      },
+      "parameter_source": "https://huggingface.co/dots-studio/dots.tts-soar/tree/2f9b3e18d70d670d4c701da2dc55ded5755815ce"
+    },
+    {
+      "model": "LongCat-AudioDiT",
+      "parameters": 3500000000,
+      "parameter_scope": "Published 3.5B DiT; excludes Wav-VAE and UMT5.",
+      "source": "https://github.com/meituan-longcat/LongCat-AudioDiT#experimental-results-on-seed-benchmark",
+      "metrics": {
+        "test-en": {
+          "error_percent": 1.5,
+          "sim_percent": 78.6
+        },
+        "test-zh": {
+          "error_percent": 1.09,
+          "sim_percent": 81.8
+        },
+        "test-zh-hard": {
+          "error_percent": 6.04,
+          "sim_percent": 79.7
+        }
+      }
+    }
+  ]
+}

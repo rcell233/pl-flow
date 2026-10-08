@@ -1,0 +1,11 @@
+include README.md ARCHITECTURE.md THIRD_PARTY.md LICENSE constraints.txt
+recursive-include licenses *.txt
+recursive-include configs *.json *.yaml
+recursive-include assets *.json *.png *.svg
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include tests/fixtures *.json
+recursive-include src/wavlm_ecapa LICENSE *.md *.txt
+prune artifacts
+prune outputs
+prune checkpoints

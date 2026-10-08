@@ -1,0 +1,18 @@
+{
+  "encoder": {
+    "latent_channels": 32,
+    "hidden_channels": 192,
+    "encoder_kernel_size": 5,
+    "encoder_dilation_rate": 1,
+    "encoder_layers": 16,
+    "stft_hop_length": 320,
+    "stft_win_length": 1280,
+    "m2l_last_time_downsample_factor": 2
+  },
+  "decoder": {
+    "latent_channels": 32,
+    "stft_hop_length": 320,
+    "stft_win_length": 1280,
+    "m2l_last_time_downsample_factor": 2
+  }
+}

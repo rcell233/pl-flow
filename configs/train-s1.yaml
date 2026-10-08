@@ -1,0 +1,14 @@
+stage: s1
+model_config: s1.json
+seed: 1234
+train:
+  batch_size: 128
+  token_budget: 32768
+  max_steps: 400000
+  learning_rate: 0.0001
+  precision: bf16
+  gradient_clip: 10.0
+  ema_decay: 0.9999
+  accumulation_steps: 1
+  log_interval: 20
+  checkpoint_interval: 1000

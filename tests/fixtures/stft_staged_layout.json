@@ -1,0 +1,688 @@
+{
+  "description": "Staged checkpoint parameter names for the synthetic legacy regression fixture.",
+  "entries": [
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.conv1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.conv1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.conv2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.conv2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.norm1.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.norm1.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.norm2.bias",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.bottleneck_layers.0.norm2.weight",
+      "staged": "decoder.synthesis.temporal_blocks.0.branch.norm_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_inp.bias",
+      "staged": "decoder.synthesis.temporal_input.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_inp.weight",
+      "staged": "decoder.synthesis.temporal_input.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_out.bias",
+      "staged": "decoder.synthesis.readout.conv.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_out.weight",
+      "staged": "decoder.synthesis.readout.conv.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_out_bottleneck.bias",
+      "staged": "decoder.synthesis.frequency_projection.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.conv_out_bottleneck.weight",
+      "staged": "decoder.synthesis.frequency_projection.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.norm_out.bias",
+      "staged": "decoder.synthesis.readout.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.norm_out.weight",
+      "staged": "decoder.synthesis.readout.norm.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.query.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.key.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.value.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.query.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.key.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "decoder.dec.up_layers.0.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.value.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.attention.mha.out_proj.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.output.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.attention.mha.out_proj.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.output.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.attention.norm.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.attention.norm.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.attention.norm.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.conv1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.conv1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.conv2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.conv2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.norm1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.norm1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.norm2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.0.norm2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.0.branch.norm_out.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.query.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.key.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.value.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.query.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.key.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "decoder.dec.up_layers.1.attention.mha.in_proj_weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.value.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.attention.mha.out_proj.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.output.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.attention.mha.out_proj.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.output.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.attention.norm.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.attention.norm.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.attention.norm.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.conv1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.conv1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.conv2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.conv2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.norm1.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.norm1.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.norm2.bias",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.1.norm2.weight",
+      "staged": "decoder.synthesis.stages.1.blocks.1.branch.norm_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.2.conv.bias",
+      "staged": "decoder.synthesis.stages.1.upsample.conv.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.2.conv.weight",
+      "staged": "decoder.synthesis.stages.1.upsample.conv.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.conv1.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.conv1.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.conv2.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.conv2.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.norm1.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.norm1.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.norm2.bias",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "decoder.dec.up_layers.3.norm2.weight",
+      "staged": "decoder.synthesis.stages.0.blocks.0.branch.norm_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.in_layers.0.bias",
+      "staged": "encoder.enc_q.enc.in_layers.0.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.in_layers.0.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.res_skip_layers.0.bias",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original0",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original0"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original1",
+      "staged": "encoder.enc_q.enc.res_skip_layers.0.parametrizations.weight.original1"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.pre.bias",
+      "staged": "encoder.enc_q.pre.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.pre.weight",
+      "staged": "encoder.enc_q.pre.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.proj.bias",
+      "staged": "encoder.enc_q.proj.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.enc_q.proj.weight",
+      "staged": "encoder.enc_q.proj.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.conv_inp.bias",
+      "staged": "encoder.analysis.input_projection.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.conv_inp.weight",
+      "staged": "encoder.analysis.input_projection.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.conv1.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.conv1.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.conv2.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.conv2.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.norm1.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.norm1.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.norm2.bias",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.0.norm2.weight",
+      "staged": "encoder.analysis.stages.0.blocks.0.branch.norm_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.1.conv.bias",
+      "staged": "encoder.analysis.stages.0.downsample.conv.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.1.conv.weight",
+      "staged": "encoder.analysis.stages.0.downsample.conv.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.1.norm.bias",
+      "staged": "encoder.analysis.stages.0.downsample.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.1.norm.weight",
+      "staged": "encoder.analysis.stages.0.downsample.norm.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.query.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.key.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.value.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.query.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.key.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.value.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.out_proj.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.output.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.attention.mha.out_proj.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.output.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.attention.norm.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.attention.norm.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.attention.norm.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.conv1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.conv1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.conv2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.conv2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.norm1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.norm1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.norm2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.norm2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.branch.norm_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.res_conv.bias",
+      "staged": "encoder.analysis.stages.1.blocks.0.shortcut.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.2.res_conv.weight",
+      "staged": "encoder.analysis.stages.1.blocks.0.shortcut.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.query.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.key.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.value.bias"
+    },
+    {
+      "operation": "slice",
+      "start": 0,
+      "stop": 8,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.query.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 8,
+      "stop": 16,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.key.weight"
+    },
+    {
+      "operation": "slice",
+      "start": 16,
+      "stop": 24,
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.in_proj_weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.value.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.out_proj.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.output.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.attention.mha.out_proj.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.output.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.attention.norm.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.attention.norm.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.attention.norm.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.conv1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.conv_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.conv1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.conv_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.conv2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.conv_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.conv2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.conv_out.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.norm1.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.norm_in.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.norm1.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.norm_in.weight"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.norm2.bias",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.norm_out.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.down_layers.3.norm2.weight",
+      "staged": "encoder.analysis.stages.1.blocks.1.branch.norm_out.weight"
+    },
+    {
+      "operation": "flatten",
+      "original": "encoder.encoder_frontend.gain.scale",
+      "staged": "encoder.analysis.frequency_gain"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.prenorm_2d_to_1d.bias",
+      "staged": "encoder.analysis.output_norm.bias"
+    },
+    {
+      "operation": "identity",
+      "original": "encoder.encoder_frontend.prenorm_2d_to_1d.weight",
+      "staged": "encoder.analysis.output_norm.weight"
+    }
+  ]
+}

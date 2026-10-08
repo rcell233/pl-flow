@@ -1,0 +1,15 @@
+stage: s2
+model_config: s2.json
+seed: 1234
+prosody_mode: frozen
+train:
+  batch_size: 16
+  token_budget: 16000
+  max_steps: 1000000
+  learning_rate: 0.0001
+  precision: bf16
+  gradient_clip: 10.0
+  ema_decay: 0.9999
+  accumulation_steps: 1
+  log_interval: 10
+  checkpoint_interval: 5000

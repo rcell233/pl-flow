@@ -1,0 +1,25 @@
+# Validated Python 3.10 stack; install the appropriate CUDA wheels first.
+torch==2.8.0
+torchaudio==2.8.0
+transformers==4.56.1
+datasets==4.0.0
+numpy==1.26.4
+einops==0.8.1
+PyYAML==6.0.2
+soundfile==0.13.1
+safetensors==0.6.2
+misaki==0.9.4
+langsegment-backup==0.3.5.post1
+# This release uses the same classifier model and supports the pinned NumPy ABI.
+py3langid==0.2.2
+monotonic-align==1.2
+auraloss==0.4.0
+ema-pytorch==0.2.3
+spacy==3.8.11
+en-core-web-sm==3.8.0
+pypinyin==0.55.0
+jieba==0.42.1
+cn2an==0.5.23
+num2words==0.5.14
+phonemizer-fork==3.3.2
+espeakng-loader==0.2.4

@@ -1,0 +1,29 @@
+{
+  "model_params": {
+    "style_encoder": {
+      "dim": 256
+    },
+    "DiT": {
+      "hidden_dim": 512,
+      "num_heads": 8,
+      "depth": 13,
+      "class_dropout_prob": 0.1,
+      "in_channels": 16,
+      "content_dim": 32
+    },
+    "wavenet": {
+      "hidden_dim": 512,
+      "num_layers": 8,
+      "kernel_size": 5,
+      "dilation_rate": 1,
+      "p_dropout": 0.2
+    }
+  },
+  "max_tokens": 512,
+  "prompt": {
+    "min_tokens": 2,
+    "max_tokens": 256,
+    "max_fraction": 0.5,
+    "dropout": 0.1
+  }
+}

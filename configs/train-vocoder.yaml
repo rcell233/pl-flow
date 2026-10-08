@@ -1,0 +1,33 @@
+stage: vocoder
+model_config: vocoder.json
+seed: 1234
+train:
+  batch_size: 4
+  token_budget: 163840
+  sample_size: 40960
+  max_steps: 250000
+  learning_rate: 0.00015
+  discriminator_learning_rate: 0.0003
+  precision: fp16
+  gradient_clip: 0
+  accumulation_steps: 1
+  log_interval: 20
+  checkpoint_interval: 5000
+  loss:
+    discriminator:
+      config:
+        filters: 64
+        n_ffts: [2048, 1024, 512, 256, 128]
+        hop_lengths: [512, 256, 128, 64, 32]
+        win_lengths: [2048, 1024, 512, 256, 128]
+      weights:
+        adversarial: 0.5
+        feature_matching: 0.2
+    spectral:
+      config:
+        fft_sizes: [2048, 1024, 512, 256, 128, 64, 32]
+        hop_sizes: [512, 256, 128, 64, 32, 16, 8]
+        win_lengths: [2048, 1024, 512, 256, 128, 64, 32]
+        perceptual_weighting: true
+      weights:
+        mrstft: 5.0

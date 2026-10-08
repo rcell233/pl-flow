@@ -1,0 +1,1234 @@
+{
+  "config": {
+    "encoder": {
+      "latent_channels": 32,
+      "hidden_channels": 192,
+      "encoder_kernel_size": 5,
+      "encoder_dilation_rate": 1,
+      "encoder_layers": 16,
+      "stft_hop_length": 320,
+      "stft_win_length": 1280,
+      "m2l_last_time_downsample_factor": 2
+    },
+    "decoder": {
+      "latent_channels": 32,
+      "stft_hop_length": 320,
+      "stft_win_length": 1280,
+      "m2l_last_time_downsample_factor": 2
+    }
+  },
+  "parameter_shapes": {
+    "decoder.temporal_residuals.0.conv_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.0.conv_input.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.0.conv_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.0.conv_output.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.0.norm_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.0.norm_input.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.0.norm_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.0.norm_output.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.1.conv_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.1.conv_input.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.1.conv_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.1.conv_output.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.1.norm_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.1.norm_input.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.1.norm_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.1.norm_output.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.2.conv_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.2.conv_input.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.2.conv_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.2.conv_output.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.2.norm_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.2.norm_input.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.2.norm_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.2.norm_output.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.3.conv_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.3.conv_input.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.3.conv_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.3.conv_output.weight": [
+      512,
+      512,
+      3
+    ],
+    "decoder.temporal_residuals.3.norm_input.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.3.norm_input.weight": [
+      512
+    ],
+    "decoder.temporal_residuals.3.norm_output.bias": [
+      512
+    ],
+    "decoder.temporal_residuals.3.norm_output.weight": [
+      512
+    ],
+    "decoder.latent_input.bias": [
+      512
+    ],
+    "decoder.latent_input.weight": [
+      512,
+      32,
+      1
+    ],
+    "decoder.spectral_output.bias": [
+      2
+    ],
+    "decoder.spectral_output.weight": [
+      2,
+      64,
+      3,
+      3
+    ],
+    "decoder.spectral_expansion.bias": [
+      5120
+    ],
+    "decoder.spectral_expansion.weight": [
+      5120,
+      512,
+      1
+    ],
+    "decoder.final_normalization.bias": [
+      64
+    ],
+    "decoder.final_normalization.weight": [
+      64
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.conv_input.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.conv_input.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.4.residuals.0.conv_output.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.4.residuals.0.norm_input.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.norm_input.weight": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.norm_output.bias": [
+      256
+    ],
+    "decoder.resolutions.4.residuals.0.norm_output.weight": [
+      256
+    ],
+    "decoder.transitions.3.filter.bias": [
+      256
+    ],
+    "decoder.transitions.3.filter.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.conv_input.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.conv_input.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.3.residuals.0.conv_output.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.3.residuals.0.norm_input.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.norm_input.weight": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.norm_output.bias": [
+      256
+    ],
+    "decoder.resolutions.3.residuals.0.norm_output.weight": [
+      256
+    ],
+    "decoder.transitions.2.filter.bias": [
+      256
+    ],
+    "decoder.transitions.2.filter.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.conv_input.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.conv_input.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.2.residuals.0.conv_output.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.2.residuals.0.norm_input.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.norm_input.weight": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.norm_output.bias": [
+      256
+    ],
+    "decoder.resolutions.2.residuals.0.norm_output.weight": [
+      256
+    ],
+    "decoder.transitions.1.filter.bias": [
+      128
+    ],
+    "decoder.transitions.1.filter.weight": [
+      128,
+      256,
+      3,
+      3
+    ],
+    "decoder.resolutions.1.residuals.0.conv_input.bias": [
+      128
+    ],
+    "decoder.resolutions.1.residuals.0.conv_input.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "decoder.resolutions.1.residuals.0.conv_output.bias": [
+      128
+    ],
+    "decoder.resolutions.1.residuals.0.conv_output.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "decoder.resolutions.1.residuals.0.norm_input.bias": [
+      128
+    ],
+    "decoder.resolutions.1.residuals.0.norm_input.weight": [
+      128
+    ],
+    "decoder.resolutions.1.residuals.0.norm_output.bias": [
+      128
+    ],
+    "decoder.resolutions.1.residuals.0.norm_output.weight": [
+      128
+    ],
+    "decoder.transitions.0.filter.bias": [
+      64
+    ],
+    "decoder.transitions.0.filter.weight": [
+      64,
+      128,
+      5,
+      3
+    ],
+    "decoder.resolutions.0.residuals.0.conv_input.bias": [
+      64
+    ],
+    "decoder.resolutions.0.residuals.0.conv_input.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "decoder.resolutions.0.residuals.0.conv_output.bias": [
+      64
+    ],
+    "decoder.resolutions.0.residuals.0.conv_output.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "decoder.resolutions.0.residuals.0.norm_input.bias": [
+      64
+    ],
+    "decoder.resolutions.0.residuals.0.norm_input.weight": [
+      64
+    ],
+    "decoder.resolutions.0.residuals.0.norm_output.bias": [
+      64
+    ],
+    "decoder.resolutions.0.residuals.0.norm_output.weight": [
+      64
+    ],
+    "encoder.posterior.network.in_layers.0.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.0.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.0.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.1.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.1.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.1.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.10.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.10.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.10.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.11.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.11.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.11.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.12.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.12.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.12.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.13.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.13.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.13.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.14.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.14.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.14.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.15.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.15.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.15.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.2.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.2.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.2.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.3.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.3.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.3.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.4.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.4.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.4.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.5.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.5.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.5.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.6.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.6.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.6.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.7.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.7.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.7.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.8.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.8.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.8.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.in_layers.9.bias": [
+      384
+    ],
+    "encoder.posterior.network.in_layers.9.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.in_layers.9.parametrizations.weight.original1": [
+      384,
+      192,
+      5
+    ],
+    "encoder.posterior.network.res_skip_layers.0.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.0.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.0.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.1.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.1.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.1.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.10.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.10.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.10.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.11.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.11.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.11.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.12.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.12.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.12.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.13.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.13.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.13.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.14.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.14.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.14.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.15.bias": [
+      192
+    ],
+    "encoder.posterior.network.res_skip_layers.15.parametrizations.weight.original0": [
+      192,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.15.parametrizations.weight.original1": [
+      192,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.2.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.2.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.2.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.3.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.3.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.3.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.4.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.4.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.4.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.5.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.5.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.5.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.6.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.6.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.6.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.7.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.7.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.7.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.8.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.8.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.8.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.9.bias": [
+      384
+    ],
+    "encoder.posterior.network.res_skip_layers.9.parametrizations.weight.original0": [
+      384,
+      1,
+      1
+    ],
+    "encoder.posterior.network.res_skip_layers.9.parametrizations.weight.original1": [
+      384,
+      192,
+      1
+    ],
+    "encoder.posterior.input.bias": [
+      192
+    ],
+    "encoder.posterior.input.weight": [
+      192,
+      5120,
+      1
+    ],
+    "encoder.posterior.output.bias": [
+      32
+    ],
+    "encoder.posterior.output.weight": [
+      32,
+      192,
+      1
+    ],
+    "encoder.spectral_input.bias": [
+      64
+    ],
+    "encoder.spectral_input.weight": [
+      64,
+      2,
+      3,
+      3
+    ],
+    "encoder.resolutions.0.residuals.0.conv_input.bias": [
+      64
+    ],
+    "encoder.resolutions.0.residuals.0.conv_input.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "encoder.resolutions.0.residuals.0.conv_output.bias": [
+      64
+    ],
+    "encoder.resolutions.0.residuals.0.conv_output.weight": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "encoder.resolutions.0.residuals.0.norm_input.bias": [
+      64
+    ],
+    "encoder.resolutions.0.residuals.0.norm_input.weight": [
+      64
+    ],
+    "encoder.resolutions.0.residuals.0.norm_output.bias": [
+      64
+    ],
+    "encoder.resolutions.0.residuals.0.norm_output.weight": [
+      64
+    ],
+    "encoder.transitions.0.filter.bias": [
+      64
+    ],
+    "encoder.transitions.0.filter.weight": [
+      64,
+      64,
+      5,
+      3
+    ],
+    "encoder.transitions.0.normalization.bias": [
+      64
+    ],
+    "encoder.transitions.0.normalization.weight": [
+      64
+    ],
+    "encoder.resolutions.1.residuals.0.conv_input.bias": [
+      128
+    ],
+    "encoder.resolutions.1.residuals.0.conv_input.weight": [
+      128,
+      64,
+      3,
+      3
+    ],
+    "encoder.resolutions.1.residuals.0.conv_output.bias": [
+      128
+    ],
+    "encoder.resolutions.1.residuals.0.conv_output.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "encoder.resolutions.1.residuals.0.norm_input.bias": [
+      64
+    ],
+    "encoder.resolutions.1.residuals.0.norm_input.weight": [
+      64
+    ],
+    "encoder.resolutions.1.residuals.0.norm_output.bias": [
+      128
+    ],
+    "encoder.resolutions.1.residuals.0.norm_output.weight": [
+      128
+    ],
+    "encoder.resolutions.1.residuals.0.shortcut.bias": [
+      128
+    ],
+    "encoder.resolutions.1.residuals.0.shortcut.weight": [
+      128,
+      64,
+      1,
+      1
+    ],
+    "encoder.transitions.1.filter.bias": [
+      128
+    ],
+    "encoder.transitions.1.filter.weight": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "encoder.transitions.1.normalization.bias": [
+      128
+    ],
+    "encoder.transitions.1.normalization.weight": [
+      128
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.conv_input.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.conv_input.weight": [
+      256,
+      128,
+      3,
+      3
+    ],
+    "encoder.resolutions.2.residuals.0.conv_output.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.resolutions.2.residuals.0.norm_input.bias": [
+      128
+    ],
+    "encoder.resolutions.2.residuals.0.norm_input.weight": [
+      128
+    ],
+    "encoder.resolutions.2.residuals.0.norm_output.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.norm_output.weight": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.shortcut.bias": [
+      256
+    ],
+    "encoder.resolutions.2.residuals.0.shortcut.weight": [
+      256,
+      128,
+      1,
+      1
+    ],
+    "encoder.transitions.2.filter.bias": [
+      256
+    ],
+    "encoder.transitions.2.filter.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.transitions.2.normalization.bias": [
+      256
+    ],
+    "encoder.transitions.2.normalization.weight": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.conv_input.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.conv_input.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.resolutions.3.residuals.0.conv_output.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.resolutions.3.residuals.0.norm_input.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.norm_input.weight": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.norm_output.bias": [
+      256
+    ],
+    "encoder.resolutions.3.residuals.0.norm_output.weight": [
+      256
+    ],
+    "encoder.transitions.3.filter.bias": [
+      256
+    ],
+    "encoder.transitions.3.filter.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.transitions.3.normalization.bias": [
+      256
+    ],
+    "encoder.transitions.3.normalization.weight": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.q.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.k.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.v.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.q.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.k.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.v.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.projection.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.projection.weight": [
+      256,
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.normalization.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.frequency_attention.normalization.weight": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.conv_input.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.conv_input.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.resolutions.4.residuals.0.conv_output.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.conv_output.weight": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "encoder.resolutions.4.residuals.0.norm_input.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.norm_input.weight": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.norm_output.bias": [
+      256
+    ],
+    "encoder.resolutions.4.residuals.0.norm_output.weight": [
+      256
+    ],
+    "encoder.frequency_scale": [
+      640
+    ],
+    "encoder.final_normalization.bias": [
+      256
+    ],
+    "encoder.final_normalization.weight": [
+      256
+    ]
+  },
+  "parameter_count": 29075362
+}

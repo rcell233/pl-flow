@@ -1,0 +1,14 @@
+{
+  "input_dim": 768,
+  "n_token": 181,
+  "hidden_size": 384,
+  "token_embedding_dim": 384,
+  "ffd_size": 1536,
+  "nheads": 12,
+  "enc_nlayers": 3,
+  "dec_nlayers": 3,
+  "layer_norm_eps": 1e-05,
+  "aligner_softmax_temp": 1.0,
+  "dropout": 0.1,
+  "max_length": 10000
+}

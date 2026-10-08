@@ -1,0 +1,45 @@
+{
+  "model_params": {
+    "style_encoder": {
+      "dim": 256
+    },
+    "DiT": {
+      "hidden_dim": 512,
+      "num_heads": 8,
+      "depth": 13,
+      "class_dropout_prob": 0.1,
+      "in_channels": 32,
+      "content_dim": 32
+    },
+    "wavenet": {
+      "hidden_dim": 512,
+      "num_layers": 8,
+      "kernel_size": 5,
+      "dilation_rate": 1,
+      "p_dropout": 0.2
+    }
+  },
+  "conditioner": {
+    "n_vocab": 178,
+    "output_channels": 32,
+    "ssl_dim": 768,
+    "hidden_channels": 192,
+    "prosody_dim": 16,
+    "duration_bins": 512,
+    "filter_channels": 768,
+    "n_heads": 2,
+    "n_layers": 6,
+    "kernel_size": 3,
+    "p_dropout": 0.1,
+    "prenet": true,
+    "duration_loss_weight": 1.0,
+    "max_token_duration": 511,
+    "max_infer_frames": 1000
+  },
+  "prompt": {
+    "min_seconds": 1.0,
+    "max_seconds": 5.0,
+    "max_fraction": 0.5,
+    "dropout": 0.1
+  }
+}

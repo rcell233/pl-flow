@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pl-flow"
+version = "0.1.0"
+description = "Phoneme-aligned prosody and acoustic flow speech synthesis"
+requires-python = ">=3.10"
+readme = "README.md"
+license = "GPL-3.0-only AND MIT AND BSD-3-Clause AND Apache-2.0 AND CC-BY-SA-3.0"
+license-files = [
+  "LICENSE", "THIRD_PARTY.md", "licenses/*.txt",
+  "src/wavlm_ecapa/LICENSE", "src/wavlm_ecapa/NOTICE.md",
+  "src/wavlm_ecapa/wavlm/LICENSE", "src/wavlm_ecapa/licenses/*.txt",
+]
+dependencies = [
+  "torch>=2.8,<2.9", "torchaudio>=2.8,<2.9", "numpy>=1.24,<2.3",
+  "transformers==4.56.1", "safetensors>=0.6", "huggingface-hub>=0.34",
+  "einops>=0.8", "PyYAML>=6", "soundfile>=0.12", "datasets>=4,<5",
+  "misaki[en,zh,ja]==0.9.4", "langsegment-backup==0.3.5.post1", "monotonic-align==1.2",
+]
+
+[project.optional-dependencies]
+train = ["auraloss==0.4.0", "ema-pytorch==0.2.3"]
+dev = ["pytest>=8", "ruff>=0.12", "build"]
+
+[project.scripts]
+pl-flow = "pl_flow.cli.main:main"
+wavlm-ecapa = "wavlm_ecapa.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+wavlm_ecapa = ["LICENSE", "NOTICE.md", "README.md", "licenses/*.txt", "wavlm/LICENSE"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
